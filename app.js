@@ -1,21 +1,27 @@
+var ctaRoutesAPI;
 
-
-getRoutes();
 
 function getRoutes(){
-	var ctaRoutesAPI = 	"http://www.ctabustracker.com/bustime/api/v2/getroutes?key=nPdrgPPcDVkVQxiySZichRMHS&format=json"
+	var jasonData;
 
-	$.getJSON(ctaRoutesAPI, (jsonData) => {
+	ctaRoutesAPI = "http://www.ctabustracker.com/bustime/api/v2/getroutes?key=nPdrgPPcDVkVQxiySZichRMHS&format=json";
+	console.log(ctaRoutesAPI);
+	$("cta").html(ctaRoutesAPI);
+	
+	$.get(ctaRoutesAPI, (jsonData) => {
 
-//		var currentRoutes = jsonData.query.results.channel.description;});
-		console.log(jasonData);
+	$("cta").html(jsonData["bustime-response"]);
+		console.log(jasonData["bustime-response"]);
+
+	});
+return false;
 }
 
 
 
 
-}
 
-function getPredictions(){
-	http://www.ctabustracker.com/bustime/api/v2/getpredictions?key=nPdrgPPcDVkVQxiySZichRMHS&format=json
-}
+
+//function getPredictions(){
+//	http://www.ctabustracker.com/bustime/api/v2/getpredictions?key=nPdrgPPcDVkVQxiySZichRMHS&format=json
+//}

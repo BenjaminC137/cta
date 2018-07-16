@@ -9,9 +9,42 @@
 
 </header>
 <h1>CTA Times</h1>
+	
 
+<!--
+		<cta onmouseover="return getRoutes()">
+            
+	</cta>
+-->
+	
+	
+	
+	
+
+   <div>
+				<h2>Search for your train arrival times:</h2>
+			<br>
+	  <div>
+		<form id="form1" onsubmit="return getRoutes()" class="formBack">
+            Train Line color: <input type="text" name="TrainEntry" placeholder="Brown" required><br><br>
+            Stop: <input type="text" name="StopEntry" placeholder="Montrose" required><br><br>
+            <input type="submit"value="Submit">
+        </form>
+	</div>
+
+    <div>
+		<br>
+		<p>
+			<cta>Results:</cta>
+		</p>
+	</div>
+</div>
+	
 <footer>
 </footer>
-<script src="app.js"></script>
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>
 </html>
